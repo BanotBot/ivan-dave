@@ -189,14 +189,19 @@ body {
     margin-left: auto; /* Push this span to the right */
 }
 
-
-
 .tag {
     font-size: 10px;
     background: #18181b;
     color: #a1a1aa;
     padding: 0.25rem 0.5rem;
     border: 1px solid #27272a;
+}
+
+
+/* About Me */
+.about-section{
+    padding: 0 10px ;
+    border: 1px solid #fff;
 }
 
 /* --- Mobile Responsiveness --- */
