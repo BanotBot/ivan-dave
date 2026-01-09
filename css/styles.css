@@ -180,12 +180,15 @@ body {
 
 .tag-container {
     display: flex;
+    justify-content: space-between; /* Push content to ends */
+    align-items: center; /* Vertically center */
     gap: 0.5rem;
 }
 
-.tag-container span{
-    justify-content: flex-end;
+.tag-container .tag {
+    margin-left: auto; /* Push this span to the right */
 }
+
 
 
 .tag {
