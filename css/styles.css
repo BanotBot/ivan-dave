@@ -1,4 +1,9 @@
 /* --- Global Styles --- */
+
+html {
+  scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -13,7 +18,7 @@ body {
 }
 
 .portfolio-container {
-    max-width: 1300px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 1.5rem;
 }
@@ -47,12 +52,18 @@ body {
 }
 
 .nav-links li {
+    color: #fff;
     cursor: pointer;
     transition: color 0.3s ease;
 }
 
-.nav-links li:hover {
-    text-decoration: underline;
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-links li a:hover {
+    text-decoration: none;
     color: #ff0000;
 }
 
@@ -146,6 +157,11 @@ body {
     margin-bottom: 1rem;
 }
 
+.project-header img {
+    width: 30px;
+    height: auto;
+}
+
 .project-title {
     font-size: 1.25rem;
     font-weight: bold;
@@ -167,6 +183,11 @@ body {
     display: flex;
     gap: 0.5rem;
 }
+
+.tag-container span{
+    justify-content: flex-end;
+}
+
 
 .tag {
     font-size: 10px;

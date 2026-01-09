@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | Ivan Dave S. Besere</title>
+    <link rel="icon" type="image/png" href="images/TV.png">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+
 </head>
 <body class="portfolio-container">
 
@@ -14,16 +18,16 @@
         </div>
 
         <ul class="nav-links">
-            <li>Home</li>
+            <li><a href="#home">Home</a></li>
             <li>About me</li>
-            <li>Services</li>
+            <li><a href="#services">Services</a></li>
             <li>Portfolio</li>
             <li>Experience</li>
             <li>Contacts</li>
         </ul>
     </nav>
 
-    <section class="hero-layout">
+    <section class="hero-layout" id="home">
         <div class="hero-text-content">
             <h1 class="hero-title">
                 Hi, I am <span class="highlight">Ivan Dave S. Besere</span><br>
@@ -46,19 +50,43 @@
         </aside>
     </section>
 
-    <section class="projects-grid">
+    <section class="projects-grid" id="services">
         <div class="project-card">
             <div class="project-header">
-                <h3 class="project-title">Real-time Data Pipeline</h3>
+                <img src="images/cafe_logo.png" alt="">
+                <h3 class="project-title">CafeEtherealPayroll</h3>
                 <span class="project-number">01</span>
             </div>
             <p class="project-desc">Processed 50k events/sec using Kafka and Go. Focused on low-latency data streaming and fault tolerance.</p>
             <div class="tag-container">
-                <span class="tag">GO</span>
-                <span class="tag">KAFKA</span>
-                <span class="tag">REDIS</span>
+                <span class="tag"><i class="bi bi-arrow-right"></i></span>
             </div>
         </div>
+
+        <div class="project-card">
+            <div class="project-header">
+                <img src="images/cafe_logo.png" alt="">
+                <h3 class="project-title">CafeEtherealPayroll</h3>
+                <span class="project-number">02</span>
+            </div>
+            <p class="project-desc">Processed 50k events/sec using Kafka and Go. Focused on low-latency data streaming and fault tolerance.</p>
+            <div class="tag-container">
+                <span class="tag"><i class="bi bi-arrow-right"></i></span>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-header">
+                <img src="images/cafe_logo.png" alt="">
+                <h3 class="project-title">CafeEtherealPayroll</h3>
+                <span class="project-number">03</span>
+            </div>
+            <p class="project-desc">Processed 50k events/sec using Kafka and Go. Focused on low-latency data streaming and fault tolerance.</p>
+            <div class="tag-container">
+                <span class="tag"><i class="bi bi-arrow-right"></i></span>
+            </div>
+        </div>
+
     </section>
 
 </body>
