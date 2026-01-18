@@ -197,11 +197,11 @@ body {
     border: 1px solid #27272a;
 }
 
-
 /* About Me */
-.about-section{
-    padding: 0 10px ;
-    border: 1px solid #fff;
+.project-card img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 /* --- Mobile Responsiveness --- */
