@@ -134,74 +134,132 @@ body {
 /* --- Projects Grid --- */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* auto-fill ensures cards maintain size even if there are only 1 or 2 */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 2.5rem;
     padding: 4rem 0;
 }
 
 .project-card {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
     border: 1px solid #27272a;
     padding: 1.5rem;
+    background: #09090b; /* Adding a base color helps visibility */
     transition: all 0.3s ease;
 }
 
 .project-card:hover {
     border-color: #fff;
+    transform: translateY(-5px); /* Subtle lift effect */
 }
 
+/* Header Alignment */
 .project-header {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 1rem;
+    align-items: center; /* Vertically centers logo, title, and number */
+    gap: 1rem;
+    margin-bottom: 1.25rem;
 }
 
 .project-header img {
-    width: 30px;
-    height: auto;
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
 }
 
 .project-title {
-    font-size: 1.25rem;
-    font-weight: bold;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
+    flex-grow: 1; /* Pushes the project number to the right */
+    color: #fafafa;
 }
 
 .project-number {
     font-size: 0.75rem;
+    font-family: monospace; /* Looks cleaner for numbers */
     color: #52525b;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.1em;
 }
 
+/* Description & Auto-Alignment */
 .project-desc {
-    color: #71717a;
+    color: #a1a1aa;
     font-size: 0.875rem;
-    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    flex-grow: 1; /* Key: Takes up all space to push the footer down */
 }
 
+/* Footer / Button Area */
 .tag-container {
     display: flex;
-    justify-content: space-between; /* Push content to ends */
-    align-items: center; /* Vertically center */
-    gap: 0.5rem;
-}
-
-.tag-container .tag {
-    margin-left: auto; /* Push this span to the right */
+    justify-content: flex-end; /* Aligns button to the right */
+    align-items: center;
+    border-top: 1px solid #18181b; /* Optional: adds separation */
+    padding-top: 1rem;
 }
 
 .tag {
-    font-size: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     background: #18181b;
-    color: #a1a1aa;
-    padding: 0.25rem 0.5rem;
     border: 1px solid #27272a;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.tag a {
+    color: #fff;
+    padding: 0.5rem 0.75rem;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.tag:hover {
+    background: #fff;
+}
+
+.tag:hover a {
+    color: #000;
 }
 
 /* About Me */
-.project-card img {
-    max-width: 100%;
+.project-card-about-me {
+    backdrop-filter: blur(10px); /* Blur effect */
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 280px;
+}
+
+/* Make the center card slightly larger */
+.project-card-about-me:nth-child(2) {
+    transform: scale(1.1);
+    border: 2px solid #ff0008; /* Optional: brand color border */
+}
+
+/* Image styling */
+.project-card-about-me img {
+    width: 100%;
     height: auto;
+    border-radius: 15px;
     display: block;
+}
+
+/* Hover effects */
+.project-card-about-me:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    background: #fff;
+}
+
+/* Hover effect specifically for the center card so it doesn't shrink */
+.project-card-about-me:nth-child(2):hover {
+    transform: scale(1.15) translateY(-10px);
 }
 
 /* --- Mobile Responsiveness --- */
@@ -217,5 +275,23 @@ body {
 
     .hero-title {
         font-size: 2.25rem;
+    }
+
+    .projects-grid {
+        flex-direction: column; 
+        gap: 40px;            
+    }
+
+    .project-card-about-me {
+        width: 90%;           
+        max-width: 350px;     
+    }
+    
+    .project-card-about-me:nth-child(2) {
+        transform: scale(1); 
+    }
+
+    .project-card-about-me:nth-child(2):hover {
+        transform: translateY(-10px);
     }
 }
