@@ -131,6 +131,60 @@ body {
     display: block;
 }
 
+
+/* --- Tools Use --- */
+/* Container that hides the overflow */
+.logo-slider {
+    overflow: hidden;
+    padding: 30px 0;
+    background: rgb(0, 0, 0); /* Match your site background */
+    white-space: nowrap;
+    position: relative;
+}
+
+/* The moving row */
+.tools-grid {
+    display: flex;
+    width: max-content; /* Vital: allows it to extend beyond screen width */
+    animation: scroll 20s linear infinite;
+}
+
+/* Individual card styling */
+.tools-card {
+    flex: 0 0 auto;
+    width: 150px; /* Adjust based on icon size */
+    margin: 0 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tools-card img {
+    width: 50%;
+    height: auto;
+    filter: grayscale(100%); /* Optional: makes logos look uniform */
+    transition: filter 0.3s ease;
+}
+
+.tools-card img:hover {
+    filter: grayscale(0%); /* Brings color back on hover */
+}
+
+/* The Animation */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%); /* Moves exactly half the width to loop */
+    }
+}
+
+/* Pause animation on hover so people can look closer */
+.logo-slider:hover .tools-grid {
+    animation-play-state: paused;
+}
+
 /* --- Projects Grid --- */
 .projects-grid {
     display: grid;
