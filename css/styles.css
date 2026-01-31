@@ -251,7 +251,7 @@ body {
     display: flex;
     justify-content: flex-end; /* Aligns button to the right */
     align-items: center;
-    border-top: 1px solid #18181b; /* Optional: adds separation */
+    border-top: 1px solid #18181b;
     padding-top: 1rem;
 }
 
@@ -290,6 +290,14 @@ body {
     width: 280px;
 }
 
+.project-card-about-me p {
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  font-size:1rem;
+}
+
+
+
 /* Make the center card slightly larger */
 .project-card-about-me:nth-child(2) {
     transform: scale(1.1);
@@ -309,6 +317,7 @@ body {
     transform: translateY(-10px);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
     background: #fff;
+    color:#000;
 }
 
 /* Hover effect specifically for the center card so it doesn't shrink */
