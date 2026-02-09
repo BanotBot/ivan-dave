@@ -377,7 +377,8 @@ body {
 /* --- Mobile Responsiveness --- */
 @media (max-width: 768px) {
     .logo-img {
-        height: 120px;
+        justify-content: center;
+        height: 130px;
     }
 
     .hero-layout {
