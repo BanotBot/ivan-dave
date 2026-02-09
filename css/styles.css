@@ -366,9 +366,6 @@ body {
 
 
 @media (max-width: 480px) {
-    .logo-img {
-        height: 150px;
-    }
     .contacts-grid ul {
         gap: 15px;
     }
@@ -380,8 +377,7 @@ body {
 /* --- Mobile Responsiveness --- */
 @media (max-width: 768px) {
     .logo-img {
-        margin-left: 10px;
-        height: 150px;
+        height: 120px;
     }
 
     .hero-layout {
