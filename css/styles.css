@@ -367,7 +367,6 @@ body {
 
 @media (max-width: 480px) {
     .logo-img {
-        margin-left: 10px;
         height: 150px;
     }
     .contacts-grid ul {
