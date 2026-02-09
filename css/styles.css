@@ -366,6 +366,10 @@ body {
 
 
 @media (max-width: 480px) {
+    .logo-img {
+        margin-left: 10px;
+        height: 150px;
+    }
     .contacts-grid ul {
         gap: 15px;
     }
@@ -376,6 +380,11 @@ body {
 
 /* --- Mobile Responsiveness --- */
 @media (max-width: 768px) {
+    .logo-img {
+        margin-left: 10px;
+        height: 150px;
+    }
+
     .hero-layout {
         flex-direction: column;
         text-align: center;
